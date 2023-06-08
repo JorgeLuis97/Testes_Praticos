@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Funcionários</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 400px;
+            position: absolute;
+            top: 15%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"],
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover,
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            color: #008000;
+            margin-top: 20px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao sistema de cadastro de funcionários da ACME LTDA!</h1>
+    <form action="/" method="post">
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id">
+        <br>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+        <br>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf">
+        <br>
+        <label for="cargo">Cargo:</label>
+        <input type="text" name="cargo" id="cargo">
+        <br>
+        <label for="salario">Salário:</label>
+        <input type="text" name="salario" id="salario">
+        <br>
+        <input type="submit" value="Cadastrar">
+        <a class="button" href="/funcionarios">Visualizar Funcionários</a>
+    </form>
+
+    {% if message %}
+    <p class="success-message">{{ message }}</p>
+    {% endif %}
+</body>
+</html>

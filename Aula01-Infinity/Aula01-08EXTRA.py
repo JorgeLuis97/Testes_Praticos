@@ -21,5 +21,3 @@ else:
     vencedor = lista[1][0] if lista[0][1] == 'PAR' else lista[0][0]
 
 print(f"O vencedor é: {vencedor}")
-
-

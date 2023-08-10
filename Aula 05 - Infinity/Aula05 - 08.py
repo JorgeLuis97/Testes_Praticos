@@ -1,4 +1,4 @@
-# 4. Escreva uma função que recebe uma parametro n, leia n números e imprima o maior e o menor no final
+# Escreva uma função que recebe uma parametro n, leia n números e imprima o maior e o menor no final
 n1 = int(input("Digite a quantidade de perguntas: "))
 
 

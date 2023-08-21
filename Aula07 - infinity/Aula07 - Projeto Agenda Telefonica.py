@@ -23,8 +23,9 @@ def editarcontato(nome, telefone):
     else:
         print("Contato não Encontrado!")
 
-def editarcontato1():
-    
+
+# def editarcontato1():
+
 
 def buscarcontato(nome):
     if nome in Agenda:
@@ -42,6 +43,7 @@ def deletarcontato(nome):
                   f"Telefone: {Agenda[i]}")
             print("----------------\n")
         print("                           ")
+
 
 def listarcontato():
     print("     Lista de Contatos     ")

@@ -98,6 +98,14 @@ while True:
                          "Número de Contato: ")
         print("                              ")
         editarcontato(Nome, Telefone)
+        if opcaoedit == 3:
+            Nome = input("Nome do contato: ").upper()
+
+        Nome = input("Nome do contato: ").upper()
+        Telefone = input("Ex. 85 99999-9999 \n"
+                         "Número de Contato: ")
+        print("                              ")
+        editarcontato(Nome, Telefone)
 
     elif opcao == 3:
         print("     Alteração de contato     ")

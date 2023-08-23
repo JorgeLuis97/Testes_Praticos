@@ -9,8 +9,10 @@ def adicionarcontato(nome, telefone):
     print("Contato Adicionado com sucesso!")
 
 
-def editarcontato(nome, telefone):
+def editarcontato(nome):
     if nome in Agenda:
+        telefone = input("Ex. 85 99999-9999 \n"
+                         "Número de Contato: ")
         Agenda[nome] = telefone
         print("Contato alterado com sucesso!\n")
         print("     Lista de Contatos     ")
@@ -24,7 +26,40 @@ def editarcontato(nome, telefone):
         print("Contato não Encontrado!")
 
 
-# def editarcontato1():
+def editarcontato_telefone_nome(nome):
+    if nome in Agenda:
+        nome1 = input("Novo nome: ").upper()
+        del Agenda[nome]
+        Agenda[nome1] = input("Ex. 85 99999-9999 \n"
+                              "Número de Contato: ")
+        print("Contato alterado com sucesso!\n")
+        print("     Lista de Contatos     ")
+        for i in Agenda:
+            print("----------------")
+            print(f"Nome:{i} \n"
+                  f"Telefone: {Agenda[i]}")
+            print("----------------")
+        print("                           ")
+    else:
+        print("Contato não Encontrado!")
+
+
+def editarcontato_nome(nome):
+    if nome in Agenda:
+        telefone1 = Agenda[nome]
+        del Agenda[Nome]
+        Nome2 = input("Novo Nome: ").upper()
+        Agenda[Nome2] = telefone1
+        print("Contato alterado com sucesso!\n")
+        print("     Lista de Contatos     ")
+        for i in Agenda:
+            print("----------------")
+            print(f"Nome:{i} \n"
+                  f"Telefone: {Agenda[i]}")
+            print("----------------\n")
+        print("                           ")
+    else:
+        print("Contato não encontrado!")
 
 
 def buscarcontato(nome):
@@ -87,25 +122,21 @@ while True:
             print("----------------\n")
         print("                           ")
         print("     Alteração de contato     ")
-        opcaoedit = int(input("1 - Somente o nome \n"
-                              "2 - Somente o Número \n"
-                              "3 - Nome e Número"))
+        opcaoedit = int(input("1 - Somente o Número \n"
+                              "2 - Somente o Nome \n"
+                              "3 - Nome e Número\n"
+                              "Opção: "))
         if opcaoedit == 1:
             Nome = input("Nome do contato: ").upper()
+            editarcontato(Nome)
 
-        Nome = input("Nome do contato: ").upper()
-        Telefone = input("Ex. 85 99999-9999 \n"
-                         "Número de Contato: ")
-        print("                              ")
-        editarcontato(Nome, Telefone)
-        if opcaoedit == 3:
+        elif opcaoedit == 3:
             Nome = input("Nome do contato: ").upper()
+            editarcontato_telefone_nome(Nome)
 
-        Nome = input("Nome do contato: ").upper()
-        Telefone = input("Ex. 85 99999-9999 \n"
-                         "Número de Contato: ")
-        print("                              ")
-        editarcontato(Nome, Telefone)
+        elif opcaoedit == 2:
+            Nome = input("Nome do contato: ").upper()
+            editarcontato_nome(Nome)
 
     elif opcao == 3:
         print("     Alteração de contato     ")

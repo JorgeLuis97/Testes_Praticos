@@ -122,10 +122,11 @@ while True:
                   f"Telefone: {Agenda[i]}")
             print("----------------\n")
         print("                           ")
-        print("     Alteração de contato     ")
-        opcaoedit = int(input("1 - Somente o Número \n"
-                              "2 - Somente o Nome \n"
-                              "3 - Nome e Número\n"
+        print("-------Opções de Edição-------")
+        opcaoedit = int(input("1 - Editar o Número \n"
+                              "2 - Editar o Nome \n"
+                              "3 - Editar Nome e Número\n"
+                              "----------------------------------\n"
                               "Opção: "))
         if opcaoedit == 1:
             Nome = input("Nome do contato: ").upper()
@@ -140,7 +141,7 @@ while True:
             editarcontato_nome(Nome)
 
     elif opcao == 3:
-        print("     Alteração de contato     ")
+        print("-------Alteração de contato-------")
         print("")
         Nome = input("Nome do contato: ").upper()
         print("")

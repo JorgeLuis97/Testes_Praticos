@@ -91,13 +91,14 @@ def listarcontato():
 
 
 while True:
-    print("-----Agenda Telefonica----")
+    print("-----Agenda Telefonica----\n")
     opcao = int(input("1 - Adicionar Contato \n"
                       "2 - Editar Contato \n"
                       "3 - Buscar Contato \n"
                       "4 - Deletar Contato \n"
                       "5 - Listar Todos \n"
                       "6 - Sair \n"
+                      "--------------------------\n"
                       "Selecione uma opção: "))
     print("")
     if opcao == 1:
